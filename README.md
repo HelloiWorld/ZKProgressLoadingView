@@ -8,17 +8,15 @@
     [self.view addSubview:self.loadingView];
 
 ## Loading Success
-![](https://github.com/HelloiWorld/ZKProgressLoadingView/blob/master/ZKProgressLoadingView/LoadingSuccess1.gif)
-    // succeed after 3 seconds
+![](https://github.com/HelloiWorld/ZKProgressLoadingView/blob/master/ZKProgressLoadingView/LoadingSuccess1.gif) 
+    // succeed after 3 seconds 
     dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(3.0 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
         [self.loadingView progressFinish];
-    });
+    }); 
 
 ## Loading Success With Mutiple Thread 
-![](https://github.com/HelloiWorld/ZKProgressLoadingView/blob/master/ZKProgressLoadingView/LoadingSuccess2.gif)
-    self.loadingView = [[LoadingView alloc] initWithFrame:CGRectMake(0, 300, [UIScreen mainScreen].bounds.size.width, 100)];
-    [self.view addSubview:self.loadingView];
-    
+![](https://github.com/HelloiWorld/ZKProgressLoadingView/blob/master/ZKProgressLoadingView/LoadingSuccess2.gif) 
+
     dispatch_async(dispatch_queue_create("com.queue.test1", DISPATCH_QUEUE_CONCURRENT), ^{
         [NSThread sleepForTimeInterval:0.5];
         NSLog(@"dispatch-1");
