@@ -10,20 +10,6 @@
 
 @implementation UIImage (UIImageExtras)
 
--(UIImage*)imageCompressWithSimple:(UIImage*)image scale:(float)scale
-{
-    CGSize size=image.size;
-    CGFloat width=size.width;
-    CGFloat height=size.height;
-    CGFloat scaledWidth=width*scale;
-    CGFloat scaledHeight=height*scale;
-    UIGraphicsBeginImageContext(size);//thiswillcrop
-    [image drawInRect:CGRectMake(0,0,scaledWidth,scaledHeight)];
-    UIImage*newImage=UIGraphicsGetImageFromCurrentImageContext();
-    UIGraphicsEndImageContext();
-    return newImage;
-}
-
 - (UIImage *)imageByScalingToSize:(CGSize)targetSize
 {
     UIImage *sourceImage = self;

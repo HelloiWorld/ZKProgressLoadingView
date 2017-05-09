@@ -10,15 +10,28 @@
 
 @interface LoadingView : UIView
 
--(instancetype)initWithFrame:(CGRect)frame;
+- (instancetype)initWithFrame:(CGRect)frame;
 
-@property (weak, nonatomic) IBOutlet UIImageView *gifImageView;
-@property (weak, nonatomic) IBOutlet UIImageView *loadingBottomImage;
-@property (weak, nonatomic) IBOutlet UIImageView *loadingImage;
+@property (strong, nonatomic) UIImageView *loadingBottomImage;
+@property (strong, nonatomic) UIImageView *loadingImage;
 
-@property (assign, nonatomic) float progressValue;
 @property (nonatomic, strong) NSTimer *timer;
 
--(void)progressFinish;
+/**
+ 进度条更新
+
+ @param value 增长的值
+ */
+- (void)updateProgressValue:(CGFloat)value;
+
+/**
+ 计时器的更新方法
+ */
+- (void)progressUpdate;
+
+/**
+ 直接加载完成
+ */
+- (void)progressFinish;
 
 @end

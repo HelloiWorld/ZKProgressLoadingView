@@ -1,14 +1,20 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11134" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="15G31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11106"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
@@ -16,7 +22,49 @@
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="liF-cn-zEa">
+                                <rect key="frame" x="23.5" y="78.5" width="94" height="31"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                <state key="normal" title="加载成功"/>
+                                <connections>
+                                    <action selector="successClick:" destination="BYZ-38-t0r" eventType="touchUpInside" id="psX-vo-Why"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6Hr-JB-8te">
+                                <rect key="frame" x="140" y="78.5" width="94" height="31"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="6Hr-JB-8te" secondAttribute="height" multiplier="3:1" id="8HO-dg-H5a"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                <state key="normal" title="加载失败"/>
+                                <connections>
+                                    <action selector="failureClick:" destination="BYZ-38-t0r" eventType="touchUpInside" id="6al-Ty-ARU"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Hs8-Dn-mlG">
+                                <rect key="frame" x="257.5" y="78.5" width="94" height="31"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                <state key="normal" title="指定数值加载"/>
+                                <connections>
+                                    <action selector="multipleClick:" destination="BYZ-38-t0r" eventType="touchUpInside" id="pZ2-2C-y5x"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="0.89803921568627454" green="0.89803921568627454" blue="0.89803921568627454" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="Hs8-Dn-mlG" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" multiplier="260:160" id="2SM-Le-KbA"/>
+                            <constraint firstItem="6Hr-JB-8te" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" multiplier="80:284" id="6ZU-Oo-Adb"/>
+                            <constraint firstItem="6Hr-JB-8te" firstAttribute="width" secondItem="Hs8-Dn-mlG" secondAttribute="width" id="8jX-0e-Q6U"/>
+                            <constraint firstItem="6Hr-JB-8te" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" multiplier="80:320" id="OSF-UU-uuX"/>
+                            <constraint firstItem="6Hr-JB-8te" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="SiL-Rj-fQK"/>
+                            <constraint firstItem="6Hr-JB-8te" firstAttribute="centerY" secondItem="liF-cn-zEa" secondAttribute="centerY" id="VCy-PY-lAw"/>
+                            <constraint firstItem="6Hr-JB-8te" firstAttribute="height" secondItem="Hs8-Dn-mlG" secondAttribute="height" id="fKh-GA-PUc"/>
+                            <constraint firstItem="liF-cn-zEa" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" multiplier="60:160" id="g1G-dS-ceP"/>
+                            <constraint firstItem="6Hr-JB-8te" firstAttribute="width" secondItem="liF-cn-zEa" secondAttribute="width" id="k8k-zw-195"/>
+                            <constraint firstItem="6Hr-JB-8te" firstAttribute="centerY" secondItem="Hs8-Dn-mlG" secondAttribute="centerY" id="u2J-cp-wRg"/>
+                            <constraint firstItem="6Hr-JB-8te" firstAttribute="height" secondItem="liF-cn-zEa" secondAttribute="height" id="yKh-17-Qg3"/>
+                        </constraints>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>

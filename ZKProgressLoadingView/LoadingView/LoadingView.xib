@@ -6,54 +6,44 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
-        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="LoadingView">
             <connections>
-                <outlet property="gifImageView" destination="dlb-EZ-aHp" id="lWP-qI-bOm"/>
                 <outlet property="loadingBottomImage" destination="Igs-j2-cci" id="zHR-BY-4iv"/>
                 <outlet property="loadingImage" destination="Ef3-Hz-PJj" id="7lJ-c3-7qn"/>
             </connections>
         </placeholder>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
         <view contentMode="scaleToFill" id="iN0-l3-epB">
-            <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+            <rect key="frame" x="0.0" y="0.0" width="320" height="100"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="进入页底图.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="dlb-EZ-aHp">
-                    <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
-                </imageView>
                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="进入页-进度条底.png" translatesAutoresizingMaskIntoConstraints="NO" id="Igs-j2-cci">
-                    <rect key="frame" x="64" y="516" width="193" height="22"/>
+                    <rect key="frame" x="63.5" y="39" width="193" height="22"/>
                 </imageView>
                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="进入页-进度条.png" translatesAutoresizingMaskIntoConstraints="NO" id="Ef3-Hz-PJj">
-                    <rect key="frame" x="64" y="516" width="0.0" height="22"/>
+                    <rect key="frame" x="63.5" y="39" width="0.0" height="22"/>
                     <constraints>
                         <constraint firstAttribute="width" id="SSk-ja-Ldv"/>
                     </constraints>
                 </imageView>
             </subviews>
-            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
             <constraints>
-                <constraint firstAttribute="bottom" secondItem="Igs-j2-cci" secondAttribute="bottom" multiplier="568:538" id="DPM-U2-Fat"/>
-                <constraint firstAttribute="trailing" secondItem="dlb-EZ-aHp" secondAttribute="trailing" id="IAv-xs-Yp7"/>
-                <constraint firstItem="dlb-EZ-aHp" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="Ndr-Qr-lf1"/>
                 <constraint firstItem="Ef3-Hz-PJj" firstAttribute="leading" secondItem="Igs-j2-cci" secondAttribute="leading" id="Paj-Oy-4iC"/>
                 <constraint firstItem="Ef3-Hz-PJj" firstAttribute="height" secondItem="Igs-j2-cci" secondAttribute="height" id="TMs-LD-t4W"/>
                 <constraint firstItem="Igs-j2-cci" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="Tmo-Ql-UmC"/>
                 <constraint firstItem="Ef3-Hz-PJj" firstAttribute="centerY" secondItem="Igs-j2-cci" secondAttribute="centerY" id="bik-G4-1GB"/>
-                <constraint firstAttribute="bottom" secondItem="dlb-EZ-aHp" secondAttribute="bottom" id="tEd-yb-0Tn"/>
-                <constraint firstItem="dlb-EZ-aHp" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="zWW-i6-rBM"/>
+                <constraint firstItem="Igs-j2-cci" firstAttribute="centerY" secondItem="iN0-l3-epB" secondAttribute="centerY" id="y3T-rJ-mwh"/>
             </constraints>
             <nil key="simulatedStatusBarMetrics"/>
-            <point key="canvasLocation" x="-326" y="-162"/>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <point key="canvasLocation" x="-225" y="-224"/>
         </view>
     </objects>
     <resources>
         <image name="进入页-进度条.png" width="195" height="22"/>
         <image name="进入页-进度条底.png" width="193" height="21"/>
-        <image name="进入页底图.jpg" width="1242" height="2208"/>
     </resources>
 </document>

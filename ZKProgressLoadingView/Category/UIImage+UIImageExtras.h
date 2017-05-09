@@ -10,8 +10,6 @@
 
 @interface UIImage (UIImageExtras)
 
--(UIImage*)imageCompressWithSimple:(UIImage*)image scale:(float)scale;
-
 - (UIImage *)imageByScalingToSize:(CGSize)targetSize;
 
 @end
